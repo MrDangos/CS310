@@ -1,3 +1,10 @@
+// Author: Hugo Ramirez
+// Date: 03/28/2025
+// Description: program calculates the average daily balance and interest for a
+// credit card account based on user input for net balance, payment amount, number of days in billing cycle,
+// number of days payment was made before billing cycle, and interest rate.
+
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
