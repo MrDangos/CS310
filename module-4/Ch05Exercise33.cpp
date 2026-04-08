@@ -1,29 +1,38 @@
 // Author: Hugo Ramirez
 // Date: 04/07/2025
-// Description: 
+// Description: asks user to input the time to prepare the first dish, the time to prepare each additional dish, and the total time available. 
+// It then calculates and outputs how many dishes can be prepared within the given time.
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
 int main() {
-    int a=0, b=0, c=0, d=1, t=0, tt=0;
+    // Declare variables
+    int a=0, b=0, nextDishTime=0, numDishes=1, time=0, totalTime=0;
 
+        // Get user input
         cout << "Minutes to perapre first dish \n";
         cin >> a;
         cout << "How long to make next dish \n";
         cin >> b;
         cout << "amount of time you have \n";
-        cin >> t;
+        cin >> time;
 
-        c = a + b;
+        // Calcs
+        nextDishTime = a + b;
+        totalTime += nextDishTime;
 
-        while (tt <= t){
-            c = c + b;
-            tt += c;
-            d ++;
-        }
+        while (totalTime <= time){
+            nextDishTime = nextDishTime + b;
+            totalTime += nextDishTime;
+            if (totalTime<= time)
+            {
+                numDishes++;
+            }    
+        };
 
-        cout << "The number of dishes you make in " << t << " minutes is " << d << " dishes" << endl;
+        // Output
+        cout << "The number of dishes you make in " << time << " minutes is " << numDishes << " dishes" << endl;
 
     return 0;
 }
