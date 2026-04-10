@@ -8,23 +8,24 @@ using namespace std;
 
 int main() {
     // Declare variables
-    int a=0, b=0, nextDishTime=0, numDishes=1, time=0, totalTime=0;
+    int fistDish=0, nextDish=0, timeBetweenDishes=0, numDishes=1, time=0, totalTime=0;
 
         // Get user input
-        cout << "Minutes to perapre first dish \n";
-        cin >> a;
+        cout << "Minutes to make first dish \n";
+        cin >> fistDish;
         cout << "How long to make next dish \n";
-        cin >> b;
+        cin >> nextDish;
         cout << "amount of time you have \n";
         cin >> time;
 
         // Calcs
-        nextDishTime = a + b;
-        totalTime += nextDishTime;
+        nextDish = fistDish + nextDish;
+        timeBetweenDishes = nextDish + fistDish;
+        numDishes++;
 
         while (totalTime <= time){
-            nextDishTime = nextDishTime + b;
-            totalTime += nextDishTime;
+            timeBetweenDishes = nextDish + nextDish;
+            totalTime += timeBetweenDishes;
             if (totalTime<= time)
             {
                 numDishes++;

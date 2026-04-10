@@ -10,7 +10,7 @@
 using namespace std;
 
 int main() {
-    srand(time0);
+    srand(time(0));    //changed srand(time0); to srand(time(0)); 
     /*srand() function seeded with the time is used for simplicity, but it should be avoided in real code because it is
     highly deterministic, very insecure, and not evenly distributed*/
 
@@ -21,7 +21,7 @@ int main() {
 
     int answer = 0;//Initializes answer to an invalid number (possible solutions to generate range from 1 to 10,000)
 
-    while answer == solution
+    while (answer != solution) {  // fixed the syntax error in the while loop condition (missing parentheses around the condition) and fixed the logic error (using assignment operator instead of equality operator)
         cout << "What is " << number1 << " * " << number2 << "? ";
         cin >> answer;
 
@@ -30,5 +30,7 @@ int main() {
         } else {
             cout << "Incorrect. ";// endl intentionally omitted to keep the question on the same line
         }
-    getch();//Halts and waits for user input
-}
+        getch();//Halts and waits for user input
+
+    } // fixed missing brace to begging and end of the while loop
+} // fixed missing brace to end the main function\
