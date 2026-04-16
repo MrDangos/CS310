@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int addNumbers(int a, double b)
+int addNumbers(int a, int b)
 
     return a + b;
 }
