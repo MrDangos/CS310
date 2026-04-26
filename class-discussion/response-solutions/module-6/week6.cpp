@@ -28,6 +28,7 @@ int main() {
                 break;
             case LOW:
                 cout << "  The fan speed is currently set to low." << endl;
+                break; //<-- added break to prevent fall-through to the next case
             case MEDIUM:
                 cout << "  The fan speed is currently set to medium." << endl;
                 break;
